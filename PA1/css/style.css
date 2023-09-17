@@ -1,0 +1,174 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+.nav a:hover {
+  background-color: white;
+  color: black;
+}
+
+.nav {
+  position: relative;
+  overflow: hidden;
+  background-color: dimgrey;
+}
+
+.logo {
+  float: left;
+}
+
+.nav a {
+  float: left;
+  text-decoration: none;
+  padding: 32px 34px;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  background-color: dimgrey;
+}
+
+.searchbar input[type=text] {
+  width: 300px;
+  height: 25px;
+  border-radius: 25px;
+  border: none;
+}
+
+.searchbar {
+  float: right;
+  margin: 30px;
+}
+
+.searchbar button:hover {
+  background-color: rgb(34,116,138);
+}
+
+.searchbar button {
+  background-color: #dfe2e4;
+  color: #040404;
+  float: right;
+  padding: 5px 10px;
+  margin-right: 16px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+.product {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  color: rgb(34,116,138);
+  margin-bottom: 20px;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.product .btn-purchase {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.product .btn-purchase:hover {
+  opacity: 1;
+  background-color:rgb(34,116,138);
+}
+
+img {
+  width: 100%;
+}
+
+.products{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  Justify-content: space-evenly;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.dropbtnSort, .dropbtnFilter{
+  background-color:rgb(34,116,138);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.sort-items a{
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.filter-items a{
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.filter-items{
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.sort-items{
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-sort{
+  position: relative;
+  display:inline-block;
+  float: left;
+}
+
+.dropdown-filter{
+  position: relative;
+  display: inline-block;
+  float: right;
+}
+
+.dropdown-sort a:hover{
+  background-color: #ddd;
+}
+.dropdown-filter a:hover{
+  background-color: #ddd;
+}
+
+
+
+
+
+
+

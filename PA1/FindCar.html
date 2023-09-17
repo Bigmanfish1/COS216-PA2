@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find A Car</title>
+    <style>
+        .nav {
+            position: relative;
+            overflow: hidden;
+            background-color: dimgrey;
+        }
+
+
+        .nav a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .logo {
+            float: left;
+        }
+
+        .nav a {
+            float: left;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            font-size: 20px;
+            padding: 30px 32px;
+            transform: none;
+            margin: auto;
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            width: 25%;
+            height: 15px;
+            border-radius: 5px;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 1;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: white;
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: white;
+            cursor: pointer;
+        }
+
+         .findForm{
+            padding: 10px;
+            color: white;
+            background-color: rgb(34, 116, 138);
+        }
+
+        .findForm h3{  
+            text-align: center;
+            color: white;
+        }
+
+        .findForm h1{
+            text-align: center;
+        }
+
+        .findForm .slidecontainer{
+            text-align: center;
+        }
+
+        .findForm label{
+            text-align:left;
+        }
+
+        .findForm input[type=radio]{
+            margin-left: 49%;
+        }
+
+        .findForm input[type=submit]{
+            border: none;
+            background-color:dimgrey;
+            color: white;
+            font-size: 20px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        .findForm input[type=submit]:hover{
+            background-color:white;
+            color: rgb(34, 116, 138);
+        }
+
+        .findForm input[type=submit]{
+            align-items: center;
+        }
+
+        .findForm .submitB{
+            text-align: center;
+        }
+
+        body{
+            margin: 0;
+        }
+        .results{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            Justify-content: space-evenly;
+            margin-top: 50px;
+            margin-bottom: 10px;
+            padding: 10px;
+          }
+
+          .res {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+            color: rgb(34,116,138);
+            margin-bottom: 20px;
+          }
+
+          img{
+            width: 100%;
+          }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo"><img src="img/logo.png"></div>
+        <div class="nav">
+            <a href="Cars.html">Car</a>
+            <a href="Brands.html">Brands</a>
+            <a href="Compare.html">Compare</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+    </header>
+
+    <div class="findForm">
+        <form>
+            <h1>Required Questions</h1>
+            <div class="q1">
+                <h3>Must the car take petrol or diesel ?</h3>
+                <form>
+                    <input type="radio" id="petrol" name="petrol-type" value="Petrol">
+                    <label for="petrol">Petrol</label>
+                    <br>
+                    <input type="radio" id="diesel" name="petrol-type" value="Diesel">
+                    <label for="diesel">Diesel</label>
+                </form>
+            </div>
+
+            <div class="q2">
+                <h3>Do you want a manual or an automatic car ?</h3>
+                <form>
+                    <input type="radio" id="manual" name="transmission" value="Manual">
+                    <label for="manual">Manual</label>
+                    <br>
+                    <input type="radio" id="automatic" name="transmission" value="Automatic">
+                    <label for="automatic">Automatic</label>
+                </form>
+            </div>
+
+            <div class="q3">
+                <h3>Please select the maximum value of the car ?</h3>
+                <div class="slidecontainer">
+                    <input type="range" min="100000" max="10000000" value="150000" class="slider" id="priceRange">
+                </div>
+            </div>
+
+            <div class="q4">
+                <h3>Please select your maximum mileage ?</h3>
+                <div class="slidecontainer">
+                    <input type="range" min="100000" max="10000000" value="150000" class="slider" id="priceRange">
+                </div>
+            </div>
+
+            <br>
+            <h1>Optional Questions</h1>
+            <div class="q5">
+                <h3>Do you want a SUV, sedan or a hatchback ?</h3>
+                <form>
+                    <input type="radio" id="suv" name="car-type" value="SUV">
+                    <label for="suv">SUV</label>
+                    <br>
+                    <input type="radio" id="sedan" name="car-type" value="Sedan">
+                    <label for="sedan">Sedan</label>
+                </form>
+            </div>
+
+            <div class="q6">
+                <h3>Do you want a car with Apple Car Play and Andriod Auto ?</h3>
+                <form>
+                    <input type="radio" id="yes" name="smart-type" value="Yes">
+                    <label for="yes">Yes</label>
+                    <br>
+                    <input type="radio" id="no" name="smart-type" value="No">
+                    <label for="no">No</label>
+                </form>
+            </div>
+            <div class="submitB">
+                <input type="submit" value="SUBMIT">
+            </div>
+            
+        </form>
+
+    </div>
+
+    <div class="results">
+        <div class="res">
+            <div class="productimg">
+                <img src="img/mercedez c class.jpg">
+            </div>
+            <p>Mercedes-Benz C Class 2023</p>
+        </div>
+
+        <div class="res">
+            <div class="productimg">
+                <img src="img/x3.png">
+            </div>
+            <p>BMW X3 sDrive 18d 2023</p>
+        </div>
+
+        <div class="res">
+            <div class="productimg">
+                <img src="img/a4.jpg">
+            </div>
+            <p>Audi A4 35 TFSI S Tronic 2023</p>
+        </div>
+
+        <div class="res">
+            <div class="productimg">
+                <img src="img/gclass.jpg">
+            </div>
+            <p>Mercedes-Benz G400D 2023</p>
+        </div>
+
+        <div class="res">
+            <div class="productimg">
+                <img src="img/x7.jpg">
+            </div>
+            <p>BMW x7 xDrive40i 2023</p>
+        </div>
+    </div>
+</body>
+
+</html>

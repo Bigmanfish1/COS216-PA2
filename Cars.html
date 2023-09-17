@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Top Auto Dealership Cars</title>
+</head>
+
+<body>
+
+    <div class="bg">
+        <div class="nav">
+            <div class="logo"><img src="img/logo.png"></div>
+            <a href="Brands.html">Brands</a>
+            <a href="Compare.html">Compare</a>
+            <a href="FindCar.html">Find Car</a>
+            <a href="Contact.html">Contact</a>
+            <div class="searchbar">
+                <form action="#">
+                    <input type="text" placeholder="Search by make" name="search" id="search1">
+                    <button type="button" id="sB1">SEARCH</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="above-products">
+        <div class="filter1">
+            <label for="sortBox">Sort:</label>
+            <select id="sortBox">
+                <option value="none">none</option>
+                <option value="Year(ASC)">Year(ASC)</option>
+                <option value="Year(DESC)">Year(DESC)</option>
+                <option value="Name(ASC)">Name(ASC)</option>
+                <option value="Name(DESC)">Name(DESC)</option>
+            </select>
+            <button id="submit1">Sort</button>
+        </div>
+
+        <div class="filter">
+            <label for="transmission">Transmission:</label>
+            <select id="transmission">
+                <option value="none">none</option>
+                <option value="Automatic">Automatic</option>
+                <option value="Manual">Manual</option>
+            </select>
+
+            <label for="fuel-type">Fuel Type:</label>
+            <select id="fuel-type">
+                <option value="none">none</option>
+                <option value="Diesel">Diesel</option>
+                <option value="Gasoline">Gasoline</option>
+            </select>
+
+            <label for="car-type">Car Type:</label>
+            <select id="car-type">
+                <option value="none">none</option>
+                <option value="Sedan">Sedan</option>
+                <option value="Pickup">Pickup</option>
+                <option value="Hatchback">Hatchback</option>
+            </select>
+            <button id="submit">Filter</button>
+        </div>
+        <span class="noRes" id="noRes"></span>
+    </div>
+
+    <div id="loader"></div>
+    <div class="products">
+        <div class="product">
+            <div class="productimg">
+                <img id="car0">
+            </div>
+            <div class="productinfo">
+                <h1 class="pTitle" id="car0T"></h1>
+                <h2 class="price" id="car0D"></h2>
+                <div class="info">
+                    <p id="car0Tr"></p>
+                    <p id="car0S"></p>
+                </div>
+                <div class="productbtn">
+                    <!-- <button type="button" class="btn-purchase">PURCHASE</button> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="productimg">
+                <img id="car1">
+            </div>
+            <div class="productinfo">
+                <h1 class="pTitle" id="car1T"></h1>
+                <h2 class="price" id="car1D"></h2>
+                <div class="info">
+                    <p id="car1Tr"></p>
+                    <p id="car1S"></p>
+                </div>
+                <div class="productbtn">
+                    <!-- <button type="button" class="btn-purchase">PURCHASE</button> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="productimg">
+                <img id="car2">
+            </div>
+            <div class="productinfo">
+                <h1 class="pTitle" id="car2T"></h1>
+                <h2 class="price" id="car2D"></h2>
+                <div class="info">
+                    <p id="car2Tr"></p>
+                    <p id="car2S"></p>
+                </div>
+                <div class="productbtn">
+                    <!-- <button type="button" class="btn-purchase">PURCHASE</button> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="productimg">
+                <img id="car3">
+            </div>
+            <div class="productinfo">
+                <h1 class="pTitle" id="car3T"></h1>
+                <h2 class="price" id="car3D"></h2>
+                <div class="info">
+                    <p id="car3Tr"></p>
+                    <p id="car3S"></p>
+                </div>
+                <div class="productbtn">
+                    <!-- <button type="button" class="btn-purchase">PURCHASE</button> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="productimg">
+                <img id="car4">
+            </div>
+            <div class="productinfo">
+                <h1 class="pTitle" id="car4T"></h1>
+                <h2 class="price" id="car4D"></h2>
+                <div class="info">
+                    <p id="car4Tr"></p>
+                    <p id="car4S"></p>
+                </div>
+                <div class="productbtn">
+                    <!-- <button type="button" class="btn-purchase">PURCHASE</button> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="productimg">
+                <img id="car5">
+            </div>
+            <div class="productinfo">
+                <h1 class="pTitle" id="car5T"></h1>
+                <h2 class="price" id="car5D"></h2>
+                <div class="info">
+                    <p id="car5Tr"></p>
+                    <p id="car5S"></p>
+                </div>
+                <div class="productbtn">
+                    <!-- <button type="button" class="btn-purchase">PURCHASE</button> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="productimg">
+                <img id="car6">
+            </div>
+            <div class="productinfo">
+                <h1 class="pTitle" id="car6T"></h1>
+                <h2 class="price" id="car6D"></h2>
+                <div class="info">
+                    <p id="car6Tr"></p>
+                    <p id="car6S"></p>
+                </div>
+                <div class="productbtn">
+                    <!-- <button type="button" class="btn-purchase">PURCHASE</button> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="productimg">
+                <img id="car7">
+            </div>
+            <div class="productinfo">
+                <h1 class="pTitle" id="car7T"></h1>
+                <h2 class="price" id="car7D"></h2>
+                <div class="info">
+                    <p id="car7Tr"></p>
+                    <p id="car7S"></p>
+                </div>
+                <div class="productbtn">
+                    <!-- <button type="button" class="btn-purchase">PURCHASE</button> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="productimg">
+                <img id="car8">
+            </div>
+            <div class="productinfo">
+                <h1 class="pTitle" id="car8T"></h1>
+                <h2 class="price" id="car8D"></h2>
+                <div class="info">
+                    <p id="car8Tr"></p>
+                    <p id="car8S"></p>
+                </div>
+                <div class="productbtn">
+                    <!-- <button type="button" class="btn-purchase">PURCHASE</button> -->
+                </div>
+            </div>
+        </div>
+
+
+        <div class="product">
+            <div class="productimg">
+                <img id="car9">
+            </div>
+            <div class="productinfo">
+                <h1 class="pTitle" id="car9T"></h1>
+                <h2 class="price" id="car9D"></h2>
+                <div class="info">
+                    <p id="car9Tr"></p>
+                    <p id="car9S"></p>
+                </div>
+                <div class="productbtn">
+                    <!-- <button type="button" class="btn-purchase">PURCHASE</button> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="productimg">
+                <img id="car10">
+            </div>
+            <div class="productinfo">
+                <h1 class="pTitle" id="car10T"></h1>
+                <h2 class="price" id="car10D"></h2>
+                <div class="info">
+                    <p id="car10Tr"></p>
+                    <p id="car10S"></p>
+                </div>
+                <div class="productbtn">
+                    <!-- <button type="button" class="btn-purchase">PURCHASE</button> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="productimg">
+                <img id="car11">
+            </div>
+            <div class="productinfo">
+                <h1 class="pTitle" id="car11T"></h1>
+                <h2 class="price" id="car11D"></h2>
+                <div class="info">
+                    <p id="car11Tr"></p>
+                    <p id="car11S"></p>
+                </div>
+                <div class="productbtn">
+                    <!-- <button type="button" class="btn-purchase">PURCHASE</button> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="productimg">
+                <img id="car12">
+            </div>
+            <div class="productinfo">
+                <h1 class="pTitle" id="car12T"></h1>
+                <h2 class="price" id="car12D"></h2>
+                <div class="info">
+                    <p id="car12Tr"></p>
+                    <p id="car12S"></p>
+                </div>
+                <div class="productbtn">
+                    <!-- <button type="button" class="btn-purchase">PURCHASE</button> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="productimg">
+                <img id="car13">
+            </div>
+            <div class="productinfo">
+                <h1 class="pTitle" id="car13T"></h1>
+                <h2 class="price" id="car13D"></h2>
+                <div class="info">
+                    <p id="car13Tr"></p>
+                    <p id="car13S"></p>
+                </div>
+                <div class="productbtn">
+                    <!-- <button type="button" class="btn-purchase">PURCHASE</button> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="productimg">
+                <img id="car14">
+            </div>
+            <div class="productinfo">
+                <h1 class="pTitle" id="car14T"></h1>
+                <h2 class="price" id="car14D"></h2>
+                <div class="info">
+                    <p id="car14Tr"></p>
+                    <p id="car14S"></p>
+                </div>
+                <div class="productbtn">
+                    <!-- <button type="button" class="btn-purchase">PURCHASE</button> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="productimg">
+                <img id="car15">
+            </div>
+            <div class="productinfo">
+                <h1 class="pTitle" id="car15T"></h1>
+                <h2 class="price" id="car15D"></h2>
+                <div class="info">
+                    <p id="car15Tr"></p>
+                    <p id="car15S"></p>
+                </div>
+                <div class="productbtn">
+                    <!-- <button type="button" class="btn-purchase">PURCHASE</button> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="productimg">
+                <img id="car16">
+            </div>
+            <div class="productinfo">
+                <h1 class="pTitle" id="car16T"></h1>
+                <h2 class="price" id="car16D"></h2>
+                <div class="info">
+                    <p id="car16Tr"></p>
+                    <p id="car16S"></p>
+                </div>
+                <div class="productbtn">
+                    <!-- <button type="button" class="btn-purchase">PURCHASE</button> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="productimg">
+                <img id="car17">
+            </div>
+            <div class="productinfo">
+                <h1 class="pTitle" id="car17T"></h1>
+                <h2 class="price" id="car17D"></h2>
+                <div class="info">
+                    <p id="car17Tr"></p>
+                    <p id="car17S"></p>
+                </div>
+                <div class="productbtn">
+                    <!-- <button type="button" class="btn-purchase">PURCHASE</button> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="productimg">
+                <img id="car18">
+            </div>
+            <div class="productinfo">
+                <h1 class="pTitle" id="car18T"></h1>
+                <h2 class="price" id="car18D"></h2>
+                <div class="info">
+                    <p id="car18Tr"></p>
+                    <p id="car18S"></p>
+                </div>
+                <div class="productbtn">
+                    <!-- <button type="button" class="btn-purchase">PURCHASE</button> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="productimg">
+                <img id="car19">
+            </div>
+            <div class="productinfo">
+                <h1 class="pTitle" id="car19T"></h1>
+                <h2 class="price" id="car19D"></h2>
+                <div class="info">
+                    <p id="car19Tr"></p>
+                    <p id="car19S"></p>
+                </div>
+                <div class="productbtn">
+                    <!-- <button type="button" class="btn-purchase">PURCHASE</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/carsJS.js"></script>
+
+</body>
+
+</html>

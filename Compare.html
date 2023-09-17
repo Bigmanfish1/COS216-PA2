@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Cars</title>
+
+    <style>
+        .nav {
+            position: relative;
+            overflow: hidden;
+            background-color: dimgrey;
+        }
+
+
+        .nav a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .logo {
+            float: left;
+        }
+
+        .nav a {
+            float: left;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            font-size: 20px;
+            padding: 30px 32px;
+            transform: none;
+            margin: auto;
+        }
+
+        .vehicles {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            Justify-content: space-evenly;
+            margin-top: 50px;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        .vehicle {
+            max-width: 600px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+            color: rgb(34, 116, 138);
+            margin-bottom: 20px;
+            background-color: dimgrey;
+        }
+
+        img{
+            width: 100%;
+        }
+
+        table,
+        th,
+        td {
+            border: 15px solid white;
+            width: 500px;
+            text-align: center;
+            font-size: 30px;
+            color: white;
+            padding: 10px;
+            background-color: dimgrey;
+        }
+
+        th,
+        td:first-child {
+            text-align: left;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 80%;
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(34, 116, 138);
+        }
+
+        .searchbar input[type=text] {
+            width: 300px;
+            height: 25px;
+            border-radius: 25px;
+            padding: 10px;
+            background-color: white;
+            border: #040404;
+            color: black;
+        }
+
+        .searchbar {
+            float: right;
+            margin: 30px;
+            color: white;
+        }
+
+        .searchbar button:hover {
+            background-color: rgb(34, 116, 138);
+        }
+
+        .searchbar button {
+            background-color: #dfe2e4;
+            color: #040404;
+            float: right;
+            padding: 5px 10px;
+            margin-right: 16px;
+            font-size: 12px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #list li {
+            border: 1px solid #ddd;
+            margin-top: -1px;
+            background-color: #f6f6f6;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            color: rgb(34, 116, 138);
+            display: block
+        }
+
+        #list li:hover:not(.header) {
+            background-color: #eee;
+        }
+
+        #list1 {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #list1 li {
+            border: 1px solid #ddd;
+            margin-top: -1px;
+            background-color: #f6f6f6;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            color: rgb(34, 116, 138);
+            display: block
+        }
+
+        #list1 li:hover:not(.header) {
+            background-color: #eee;
+        }
+
+        #list2 {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #list2 li {
+            border: 1px solid #ddd;
+            margin-top: -1px;
+            background-color: #f6f6f6;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            color: rgb(34, 116, 138);
+            display: block
+        }
+
+        #list2 li:hover:not(.header) {
+            background-color: #eee;
+        }
+
+        #loader {
+            width: 2rem;
+            height: 2rem;
+            border: 5px solid #f3f3f3;
+            border-top: 6px solid rgb(34,116,138);
+            border-radius: 100%;
+            margin: auto;
+            visibility: hidden;
+            animation: spin 1s infinite linear;
+          }
+          #loader.display {
+            visibility: visible;
+          }
+          @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+          }
+
+          #loader1 {
+            width: 2rem;
+            height: 2rem;
+            border: 5px solid #f3f3f3;
+            border-top: 6px solid rgb(34,116,138);
+            border-radius: 100%;
+            margin: auto;
+            visibility: hidden;
+            animation: spin 1s infinite linear;
+          }
+          #loader1.display {
+            visibility: visible;
+          }
+          @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+          }
+
+          #loader2 {
+            width: 2rem;
+            height: 2rem;
+            border: 5px solid #f3f3f3;
+            border-top: 6px solid rgb(34,116,138);
+            border-radius: 100%;
+            margin: auto;
+            visibility: hidden;
+            animation: spin 1s infinite linear;
+          }
+          #loader2.display {
+            visibility: visible;
+          }
+          @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+          }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo"><img src="img/logo.png" alt=""></div>
+        <div class="nav">
+            <a href="Cars.html">Car</a>
+            <a href="FindCar.html">Find Car</a>
+            <a href="Brands.html">Brands</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+    </header>
+
+    <h1>Compare Cars</h1>
+    <div class="vehicles">
+        <table>
+            <tr class="row">
+                <th>Specifications</th>
+                <td>
+                    <div class="vehicle">
+                        <div id="loader"></div>
+                        <div class="searchbar">
+                            <input type="text" placeholder="Search by make" name="search" id="search1">
+                            <!-- <button type="button" id="searchButton1">SEARCH</button> -->
+                        </div>
+                        <ul class="resultsL" id="list">
+                            
+                        </ul>
+
+
+                        <div class="productimg">
+                            <img id="img1" src="" alt="">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="vehicle">
+                        <div id="loader1"></div>
+                        <div class="searchbar">
+                            <form>
+                                <input type="text" placeholder="Search by make" name="search" id="search2">
+                                <!-- <button type="button" id="searchButton2">SEARCH</button> -->
+
+                            </form>
+                        </div>
+                        <ul class="resultsL1" id="list1">
+
+                        </ul>
+                        <div class="productimg">
+                            <img id="img2" src="" alt="">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="vehicle">
+                        <div id="loader2"></div>
+                        <div class="searchbar">
+                            <form>
+                                <input type="text" placeholder="Search by make" name="search" id="search3">
+                                <!-- <button type="button" id="searchButton3">SEARCH</button> -->
+
+                            </form>
+                        </div>
+                        <ul class="resultsL2" id="list2">
+
+                        </ul>
+                        <div class="productimg">
+                            <img id="img3" src="" alt="">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Name
+                </td>
+                <td id="n1">
+                </td>
+                <td id="n2">
+
+                </td>
+                <td id="n3">
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Transmission
+                </td>
+                <td id="tr1">
+
+                </td>
+                <td id="tr2">
+
+                </td>
+                <td id="tr3"></td>
+            </tr>
+            <tr>
+                <td>
+                    Engine Type
+                </td>
+                <td id="et1">
+
+                </td>
+                <td id="et2">
+
+                </td>
+                <td id="et3"></td>
+            </tr>
+            <tr>
+                <td>
+                    Vehicle Type
+                </td>
+                <td id="vt1">
+
+                </td>
+                <td id="vt2">
+
+                </td>
+                <td id="vt3"></td>
+            </tr>
+            <tr>
+                <td>
+                    Max Speed
+                </td>
+                <td id="ms1">
+
+                </td>
+                <td id="ms2">
+
+                </td>
+                <td id="ms3"></td>
+            </tr>
+            <tr>
+                <td>
+                    Number of Cylinders
+                </td>
+                <td id="nc1">
+
+                </td>
+                <td id="nc2">
+
+                </td>
+                <td id="nc3"></td>
+            </tr>
+        </table>
+    </div>
+    <script src="js/compareJS.js"></script>
+</body>
+
+</html>

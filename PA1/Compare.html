@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Cars</title>
+
+    <style>
+        .nav {
+            position: relative;
+            overflow: hidden;
+            background-color: dimgrey;
+        }
+
+
+        .nav a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .logo {
+            float: left;
+        }
+
+        .nav a {
+            float: left;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            font-size: 20px;
+            padding: 30px 32px;
+            transform: none;
+            margin: auto;
+        }
+
+        .vehicles {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            Justify-content: space-evenly;
+            margin-top: 50px;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        .vehicle {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+            color: rgb(34, 116, 138);
+            margin-bottom: 20px;
+            background-color: white;
+        }
+
+        table,
+        th,
+        td {
+            border: 15px solid white;
+            width: 500px;
+            text-align: center;
+            font-size: 30px;
+            color: white;
+            padding: 10px;
+            background-color: dimgrey;
+        }
+
+        th,
+        td:first-child {
+            text-align: left;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 80%;
+        }
+
+
+        h1 {
+            text-align: center;
+            color: rgb(34, 116, 138);
+        }
+
+        .searchbar input[type=text] {
+            width: 300px;
+            height: 25px;
+            border-radius: 25px;
+            padding: 10px;
+            background-color: dimgrey;
+            border: #040404;
+            color: white;
+        }
+
+        .searchbar {
+            float: right;
+            margin: 30px;
+            color: white;
+        }
+
+        .searchbar button:hover {
+            background-color: rgb(34, 116, 138);
+        }
+
+        .searchbar button {
+            background-color: #dfe2e4;
+            color: #040404;
+            float: right;
+            padding: 5px 10px;
+            margin-right: 16px;
+            font-size: 12px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo"><img src="img/logo.png"></div>
+        <div class="nav">
+            <a href="Cars.html">Car</a>
+            <a href="FindCar.html">Find Car</a>
+            <a href="Brands.html">Brands</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+    </header>
+
+    <h1>Compare Cars</h1>
+    <div class="vehicles">
+        <table>
+            <tr class="row">
+                <th>Specifications</th>
+                <td>
+                    <div class="vehicle">
+                        <div class="searchbar">
+                            <form>
+                                <input type="text" placeholder="Search" name="search">
+                                <button type="button">SEARCH</button>
+                            </form>
+                        </div>
+
+                        <div class="productimg">
+                            <img src="img/mercedez c class.jpg">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="vehicle">
+                        <div class="searchbar">
+                            <form>
+                                <input type="text" placeholder="Search" name="search">
+                                <button type="button">SEARCH</button>
+                            </form>
+                        </div>
+
+                        <div class="productimg">
+                            <img src="img/x3.png">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Name
+                </td>
+                <td>
+                    Mercedes-Benz C Class 2023
+                </td>
+                <td>
+                    BMW X3 sDrive 18d 2023
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Price
+                </td>
+                <td>
+                    R 1 500 000
+                </td>
+                <td>
+                    R 1 200 000
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Gas Type
+                </td>
+                <td>
+                    Petrol
+                </td>
+                <td>Diesel</td>
+            </tr>
+            <tr>
+                <td>
+                    Vehicle Type
+                </td>
+                <td>
+                    Sedan
+                </td>
+                <td>
+                    SUV
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Smart System
+                </td>
+                <td>
+                    Andriod Auto and Apple Car Play avalable.
+                </td>
+                <td>
+                    Andriod Auto and Apple Car Play avalable.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Mileage
+                </td>
+                <td>
+                    2000km
+                </td>
+                <td>
+                    1000km
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
